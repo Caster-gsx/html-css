@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1, #div2{
+            width: 200px;
+            height: 200px;
+            border: 1px solid purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" ondrop="drop(event)" ondragover="allowdrop(event)">
+        <img src="./bg_flower.gif" draggable="true" id="drag" ondragstart="drag(event)" alt="">
+    </div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+    <script type="text/javascript">
+        function drop(event) {
+            // 允许放置
+            event.preventDefault();
+            var data = event.dataTransfer.getData('Text');
+            event.target.appendChild(document.getElementById(data));
+        }
+        function allowdrop(event) {
+            event.preventDefault();
+        }
+        function drag(event){
+            event.dataTransfer.setData('Text', event.target.id);
+        }
+    </script>
+</body>
+</html>
+<!-- 调用 preventDefault() 来避免浏览器对数据的默认处理（drop 事件的默认行为是以链接形式打开）
+通过 dataTransfer.getData("Text") 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据。
+被拖数据是被拖元素的 id ("drag")
+把被拖元素追加到放置元素（目标元素）中 -->
