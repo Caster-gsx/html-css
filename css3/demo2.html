@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            transition: 2s;
+        }
+        .box1:hover {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transform: rotate(360deg);
+        }
+        .box2{
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: pink;
+            animation: box2 10s;
+            position: relative;
+        }
+        @keyframes box2{
+            0%   {background:red; left:0px; top:0px;}
+            25%  {background:yellow; left:200px; top:0px;}
+            50%  {background:blue; left:200px; top:200px;}
+            75%  {background:green; left:0px; top:200px;}
+            100% {background:red; left:0px; top:0px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">过度</div>
+    <div class="box2">动画</div>
+</body>
+</html>

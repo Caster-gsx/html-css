@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            /* 圆角边框 */
+            border: 3px solid red;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 200px;
+            /* 边框阴影 */
+            box-shadow: 10px 10px 5px yellowgreen;
+        }
+        .box2{
+            background: url('./bg_flower.gif');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            margin-top: 20px;
+        }
+        .title{
+            text-shadow: 5px 5px 5px red;
+            margin-bottom: 20px;
+        }
+        .box3{
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            line-height: 120px;
+            background: gold;
+            /* 顺时针旋转30度 */
+            transform: rotate(30deg);
+            margin-bottom: 20px;
+        }
+        .box4{
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            line-height: 120px;
+            background-color: yellow;
+            /* 把元素从左侧移动 20 像素，从顶端移动 30 像素 */
+            transform: translate(20px, 30px);
+            margin-bottom: 100px;
+        }
+        .box5{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background: greenyellow;
+            /* 把宽度转换为原始尺寸的 3 倍，把高度转换为原始高度的 2 倍 */
+            transform: scale(3,2);
+            margin-left: 100px;
+        }
+        .box6{
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            line-height: 120px;
+            background: palevioletred;
+            /* 围绕 X 轴把元素翻转 15 度，围绕 Y 轴翻转 15 度 */
+            transform: skew(15deg, 15deg);
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">hello world</div>
+    <div class="box2">
+        <p>缩小的背景图片</p>
+        <p>原始图片:<img src="./bg_flower.gif" /></p>
+    </div>
+    <div class="title">文本阴影效果</div>
+    <div class="box3">rotate角度转换</div>
+    <div class="box4">transform移动</div>
+    <div class="box5">scale尺寸</div>
+    <div class="box6">skew倾斜转换</div>
+</body>
+</html>
