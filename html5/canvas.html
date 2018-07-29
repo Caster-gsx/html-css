@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <canvas id="canvas1" width="200px" height="200px" style="border: 1px solid yellow"></canvas>
+    <script type="text/javascript">
+    // 使用 id 来寻找 canvas 元素：
+        var c =  document.getElementById('myCanvas');
+        // 创建 context 对象：
+        var ctx = c.getContext('2d');
+        // fillStyle 方法将其染成红色，fillRect 方法规定了形状、位置和尺寸。
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, 0, 150, 75);
+    </script>
+    <script type="text/javascript">
+        var c = document.getElementById('canvas1');
+        var ctx = c.getContext('2d');
+        ctx.fillStyle = 'yellow';
+        ctx.beginPath();
+        ctx.arc(100, 100, 20, 0,Math.PI*2, true);
+        ctx.closePath();
+        ctx.fill();
+    </script>
+</body>
+</html>
