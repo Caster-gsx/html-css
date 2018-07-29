@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>storage</title>
+</head>
+<body>
+    <script>
+        if(localStorage.pagecount) {
+            localStorage.pagecount =  Number(localStorage.pagecount) +1;
+        }
+        else {
+            localStorage.pagecount = 1;
+        }
+        document.write("visits:" + localStorage.pagecount + "time(s)")
+    </script>
+    <hr>
+    <script type="text/javascript">
+        if (sessionStorage.pagecount)
+          {
+          sessionStorage.pagecount=Number(sessionStorage.pagecount) +1;
+          }
+        else
+          {
+          sessionStorage.pagecount=1;
+          }
+        document.write("Visits "+sessionStorage.pagecount+" time(s) this session.");
+    </script>
+</body>
+</html>
