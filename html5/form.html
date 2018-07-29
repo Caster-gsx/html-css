@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+</head>
+<body>
+    <form action="">
+        <p> email: <input type="email" /> </p>
+        <p> url: <input type="url"> </p>
+        <p>number: <input type="number" min="1" max="99" value="1" step="2"></p>
+        <p>range: <input type="range" min="0" max="100" value="0"></p>
+        <p>date: <input type="datetime-local"></p>
+        <p>search: <input type="search"></p>
+        <p> <input type="submit" > </p>
+
+        <p>
+            webpage: <input type="url" list="url-list"><input type="submit">
+            <datalist id="url-list">
+                <option value="http://www.baidu.com"></option>
+                <option value="http://Google.com"></option>
+            </datalist>
+
+        </p>
+    </form>
+</body>
+</html>
